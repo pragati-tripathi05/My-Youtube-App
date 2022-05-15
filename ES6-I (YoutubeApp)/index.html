@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="https://brandslogos.com/wp-content/uploads/thumbs/youtube-icon-logo-vector.svg">
+    <title>Youtube</title>
+    <style>
+        body{
+            width: 90%;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            height: 20px;
+            padding: 1%;
+            /* border: 2px solid green; */
+        }
+        i{
+            font-size: 25px;
+        }
+        .fa-youtube{
+            color: red;
+            font-size: 40px;
+            margin-top: -10%;
+            margin-left: -100%;
+        }
+        b{
+            font-size: 30px;
+            margin-top: -15%;
+        }
+        #search{
+            margin-top: -10px;
+        }
+        input{
+            height: 25px;
+            width: 150%;
+            margin-left: -100%;
+        }
+        .fa-magnifying-glass{
+            cursor: pointer;
+            color: black;
+        }
+        button .fa-magnifying-glass{
+            font-size: 18px;
+        }
+        button{
+            width: 20%;
+            margin-left: -1.5%;
+            color: gray;
+            border: rgb(26, 25, 25);
+            padding: 3%;
+        }
+        .fa-microphone{
+            margin-left: 10%;
+        }
+        #partition{
+            width: 400%;
+            margin-left: -120%;
+            margin-top: 18px;
+        }
+        hr{
+            width: 90%;
+            margin-left: -10px;
+        }
+        #righticons{
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+        }
+        #content{
+            display: flex;
+        /* border: 1px solid red; */
+            width: 95%;
+            margin: auto;
+        }
+        #leftmenu{
+            /* border: 1px solid black; */
+            width: 20%;
+            margin-top: 2%;
+            height: auto;
+            margin-left: -2%;
+        }
+        #rightvideos{
+            /* border: 1px solid blue; */
+            width: 95%;
+            margin-top: 2%;
+            height: auto;
+            cursor: pointer;
+        }
+        #show_videos{
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        grid-gap: 5%;
+    }
+
+    #show_videos div{
+        width: auto;
+        height: auto;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    #last{
+        color: gray;
+        font-size: 12px;
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="bmenu"><i class="fa-solid fa-bars"></i></div>
+        <div id="name"><i class="fa-brands fa-youtube"></i> <b> Youtube </b> </div>
+        <div id="search">
+            <input type="text" id="query">
+            <button onclick="searchVideos()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <i class="fa-solid fa-microphone"></i>
+            <hr id="partition">
+        </div>
+        <div id="righticons">
+            <div><i class="fa-solid fa-video"></i></div>
+            <div><i class="fa-solid fa-grip"></i></div>
+            <div><i class="fa-solid fa-bell"></i></div>
+            <div><i class="fa-solid fa-circle-user"></i></div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="leftmenu">
+            <div id="mainoptions">
+                <p> <i class="fa-solid fa-house"></i> Home </p>
+                <p> <i class="fa-regular fa-compass"></i> Explore </p>
+                <p> <i class="fa-solid fa-mobile-screen-button"></i> Shorts </p>
+                <p> <i class="fa-brands fa-playstation"></i> Subscriptions </p>
+                <hr/>
+            </div>
+            <div>
+                <p> <i class="fa-solid fa-file-video"></i> Library </p>
+                <p> <i class="fa-solid fa-clock"></i> History </p>
+                <p> <i class="fa-solid fa-film"></i> Your videos </p>
+                <p> <i class="fa-solid fa-file-zipper"></i> Watch Later </p>
+                <p> <i class="fa-solid fa-angle-down"></i> Show more </p>
+                <hr/>
+                <br/>
+            </div>
+            <div> SUBSCRIPTIONS <br/> <hr/> </div>
+            <div>
+                MORE FROM YOUTUBE
+                <p> <i class="fa-brands fa-youtube-square"></i> Youtube Premium </p>
+                <P> <i class="fa-solid fa-film"></i> Films </P>
+                <P> <i class="fa-solid fa-dice"></i> Gaming </P>
+                <P> <i class="fa-brands fa-nfc-directional"></i> Live </P>
+                <P> <i class="fa-brands fa-cotton-bureau"></i> Fashion & beauty </P>
+                <P> <i class="fa-solid fa-lightbulb"></i> Learning </P>
+                <P> <i class="fa-solid fa-trophy"></i> Sport </P>
+                <hr/>
+            </div>
+            <div>
+                <p> <i class="fa-solid fa-gear"></i> Settings </p>
+                <p> <i class="fa-solid fa-flag"></i> Report history </p>
+                <p> <i class="fa-brands fa-hire-a-helper"></i> Help </p>
+                <p>  <i class="fa-brands fa-wpforms"></i>Send feedback </p>
+                <hr/>
+            </div>
+            <div>
+                <p> About Press Copyright </p>
+                <p> Contact us   Creator   Advertise </p>
+                <p> Developers </p>
+                <br/>
+                <p> Terms Privacy Policy & Safety </p>
+                <p> How Youtube works </p>
+                <p> Test new features </p>
+                <br/>
+                <p id="last"> © 2022 Google LLC </p>
+            </div>
+        </div>
+
+        <div id="rightvideos">
+            <div id="show_videos"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>   
+    const API = "AIzaSyClbkV2Rp6qWUrPqgxGoAiqPNPIojiTKc0";
+    
+        const searchVideos = async () => {
+            try{
+                const q = document.getElementById("query").value;
+    
+                const res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${q}%20strange&key=${API}`);
+                
+                const data = await res.json();
+                console.log(data);
+                append(data.items);
+            } catch(err){
+                console.log(err);
+            }
+        };
+    
+        const append = (videos) => {
+            let show_videos = document.getElementById("show_videos");
+    
+            show_videos.innerHTML = null;
+    
+            videos.forEach(({id: { videoId }, snippet: { title }, snippet : {thumbnails: { medium: { url }} }}) => {
+                let div = document.createElement("div");
+                let iframe = document.createElement("iframe");
+    
+                //displays video in the small window
+                // iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                iframe.src = url;
+                iframe.width = "100%";
+                iframe.height = "70%";
+                iframe.allow = "fullscreen";
+    
+                let name = document.createElement("p");
+                name.innerText = title;
+    
+                div.append(iframe, name);
+    
+                let data = {
+                    title, videoId, url,
+                };
+    
+                let vidarr = []
+                div.onclick = () => {
+                    vidarr.push(data);
+                    showVideo(vidarr);
+                };
+                show_videos.append(div);
+            });
+        };
+    
+        const showVideo = (x) => {
+            window.location.href = "video.html";
+            localStorage.setItem("video", JSON.stringify(x));
+        }
+    </script>
